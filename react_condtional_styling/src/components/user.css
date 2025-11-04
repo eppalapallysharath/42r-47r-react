@@ -1,0 +1,10 @@
+.user-login{
+    color: yellow !important;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.user-logout{
+    color: darkcyan !important;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
