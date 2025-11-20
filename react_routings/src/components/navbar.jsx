@@ -8,6 +8,7 @@ export const Navbar = () =>{
             <NavLink to={"/contact"}> <li>Contact</li></NavLink> 
             <Link to="/service"><li>Service</li></Link>
             <NavLink to="/about">About us</NavLink>
+            <NavLink to="/login">Login</NavLink>
         </ul>
     </nav>
 }
