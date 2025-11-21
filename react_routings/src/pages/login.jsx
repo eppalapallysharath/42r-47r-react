@@ -10,13 +10,16 @@ export const Login = () =>{
 
     const handleLogin = (e) =>{
         e.preventDefault()
-        const users = [{email: "sharath@gmail.com", password:"123456"}, {email:"tom@gmail.com", password:"tom123"}] 
+        const users = [{email: "sharath@gmail.com", password:"123456",role:"student"}, {email:"tom@gmail.com", password:"tom123", role:"teacher"}] 
         const data = users.find(item => item.email === email && item.password === password)
+     
         if(data){
-           toast.success("login successful")
-            navigate("/dashboard")
-        }else{
-            toast.error("login failed invalid email/password")
+            if(data.role === 'student'){
+                navigate("/dashboard", {state:{email}})
+            }
+            else if(data.role === "teacher"){
+                navigate("/teacher/dashboard")
+            }
         }
     }
 
